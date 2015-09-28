@@ -3,10 +3,10 @@
   <channel>
     <title>Jake Fleming</title>
     <description>Thoughts and work related to product design.</description>
-    <link>http://jakefleming.net/</link>
-    <atom:link href="http://jakefleming.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Sep 2015 18:09:37 -0700</pubDate>
-    <lastBuildDate>Sun, 27 Sep 2015 18:09:37 -0700</lastBuildDate>
+    <link>http://jakefleming.net/jakeFlemingDesign/</link>
+    <atom:link href="http://jakefleming.net/jakeFlemingDesign/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 27 Sep 2015 18:50:43 -0700</pubDate>
+    <lastBuildDate>Sun, 27 Sep 2015 18:50:43 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -16,8 +16,8 @@
 &lt;p&gt;The symposium takes place in the context of a special cooperation with the Städtische Galerie im Lenbachhaus. The point of departure is the phase of art history in which both visual artists and choreographers founded a groundbreaking laboratory that tested the art forms’ limits between 1962 and 1964: the Judson Dance Theater.&lt;/p&gt;
 </description>
         <pubDate>Sun, 27 Sep 2015 06:22:51 -0700</pubDate>
-        <link>http://jakefleming.net/welcome-to-jekyll</link>
-        <guid isPermaLink="true">http://jakefleming.net/welcome-to-jekyll</guid>
+        <link>http://jakefleming.net/jakeFlemingDesign/welcome-to-jekyll</link>
+        <guid isPermaLink="true">http://jakefleming.net/jakeFlemingDesign/welcome-to-jekyll</guid>
         
         
         <category>jekyll</category>
