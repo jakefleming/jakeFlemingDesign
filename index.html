@@ -2,24 +2,124 @@
 layout: default
 ---
 
-<div class="home">
 
-  <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <!--<a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
 
-          {{ post.excerpt }}
-      </li>
-    {% endfor %}
-  </ul>
+      <div class="trigger">
+        {% for page in site.pages %}
+          {% if page.title %}
+          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </nav>-->
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="shape-A">
+          <div class="shape-B"></div>
+        </div>
+      </div>
+      <div class="col-sm-8">
+
+        <svg version="1.1" class="logo-mark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56 48" style="enable-background:new 0 0 56 48;" xml:space="preserve">
+
+          <g>
+            <path shape-rendering="crispEdges"  d="M54,24h-2V4c0-2.2-1.8-4-4-4H16c-2.2,0-4,1.8-4,4v4H8c-2.2,0-4,1.8-4,4v12H2c-1.1,0-2,0.9-2,2v4
+            c0,1.1,0.9,2,2,2h2v8c0,4.4,3.6,8,8,8h32c4.4,0,8-3.6,8-8v-8h2c1.1,0,2-0.9,2-2v-4C56,24.9,55.1,24,54,24z M20,30c0,1.1-0.9,2-2,2
+            h-4c-1.1,0-2-0.9-2-2v-4c0-1.1,0.9-2,2-2h4c1.1,0,2,0.9,2,2V30z M44,30c0,1.1-0.9,2-2,2h-4c-1.1,0-2-0.9-2-2v-4c0-1.1,0.9-2,2-2h4
+            c1.1,0,2,0.9,2,2V30z"/>
+          </g>
+        </svg>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="home">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-4">
+          <div class="box">
+            <h1 class="page-title">Jake Fleming
+              <div class="shape-C"></div>
+              <h2 class="page-subtitle">PRODUCT DESIGNER PERSON
+              </h2>
+              <!--<h4 class="page-subtitle">Product Design Enthusiast</h4>-->
+            </div>
+          </div>
+          <div class="shape-D">
+
+          </div>
+        </div>
+        <!-- This loops through the paginated posts -->
+        <div class="row">
+          {% for post in paginator.posts %}
+          <div class="col-xs-4">
+            <div class="box">
+              <ul class="post-trivia">
+                <li class="post-trivia__item">{{ post.verb }} {{ post.date | date: '%B %d, %Y' }}</li>
+                <li class="post-trivia__item">{{ post.trivia1 }}</li>
+                <li class="post-trivia__item">{{ post.trivia2 }}</li>
+                <li class="post-trivia__item">{{ post.trivia3 }}</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-8">
+            <div class="box post-preview">
+              <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+              <div class="featured-image">
+                <img src="{{ post.featured-image }}"/>
+              </div>
+              <div class="content">
+               {{ post.excerpt}}
+               <a href="{{ post.url }}" class="text-link">
+                Read the entire post
+               </a> 
+             </div>
+           </div>
+         </div>
+         {% endfor %}
+       </div>
+
+       <!-- Pagination links -->
+       {% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+  {% else %}
+    <span>&laquo; Prev</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <em>{{ page }}</em>
+    {% elsif page == 1 %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  {% else %}
+    <span>Next &raquo;</span>
+  {% endif %}
 </div>
+{% endif %}
+
+
+    </div>

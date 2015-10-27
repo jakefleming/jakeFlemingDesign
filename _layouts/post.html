@@ -1,15 +1,32 @@
 ---
 layout: default
 ---
-<div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <div class="featured-image">
 
+            <img src="{{ page.featured-image }}"/>
+
+        </div>
+        <div class="post">
+
+            <header class="post-header">
+                <h1 class="post-title">{{ page.title }}</h1>
+            </header>
+            <ul class="post-trivia">
+                <li class="post-trivia__item">{{ page.verb }} {{ page.date | date: '%B %d, %Y' }}</li>
+                <li class="post-trivia__item">{{ page.trivia1 }}</li>
+                <li class="post-trivia__item">{{ page.trivia2 }}</li>
+                <li class="post-trivia__item">{{ page.trivia3 }}</li>
+            </ul>
+
+            <article class="post-content">
+                {{ content }}
+            </article>
+
+        </div>
+    </div>
 </div>
+

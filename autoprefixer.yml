@@ -1,0 +1,5 @@
+:safe: false
+:browsers:
+  - "last 5 version"
+  - "> 3%"
+  - "Explorer 10"

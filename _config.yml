@@ -5,8 +5,11 @@ description: Thoughts and work related to product design.
 url: "http://jakefleming.net" # the base hostname & protocol for your site
 twitter_username: jakeflem
 github_username:  jakefleming
-paginate: 3
+paginate: 5
 
 # Build settings
 markdown: kramdown
 permalink: /:title
+
+gems:
+  - octopress-autoprefixer
