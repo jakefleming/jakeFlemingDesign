@@ -42,3 +42,5 @@ Past you
 A “past you” is somebody who’s aspiring to get to your level in terms of skillset or career. In this scenario, you are the future you to your past you. You are the beacon. You are the mentor. You are the sagely instructor. You should take every possible chance to help out fellow designers who are following in your footsteps. Tell them the things you wish you knew when you were in their shoes. You might think to yourself, “But I don’t want to give away my secrets. I got to where I am without knowing these things. Why should they get that benefit when I had to figure it out myself?” Well, that’s a mighty fine sob story and everything, but being a designer isn’t about keeping secrets. It’s about solving real problems for real people. Share your successes and failures and don’t be a dick.
 
 
+
+
