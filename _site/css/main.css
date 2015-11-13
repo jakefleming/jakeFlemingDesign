@@ -326,6 +326,19 @@ pre {
   @media screen and (max-width: 800px) {
     .post-content h4 {
       font-size: 18px; } }
+.post-content .quote {
+  display: block;
+  font-size: 32px;
+  line-height: 40px;
+  font-style: italic;
+  margin-bottom: 1em;
+  padding: 40px;
+  border-left: 4px solid #201D26;
+  position: relative; }
+  .post-content .quote-author {
+    display: block;
+    font-size: 16px;
+    font-style: normal; }
 
 .post-trivia {
   list-style-type: none;
@@ -382,7 +395,6 @@ a {
   a:hover {
     text-decoration: none; }
   a.text-link {
-    color: #5B19FF;
     font-size: 16px;
     line-height: 24px;
     text-transform: uppercase;
@@ -390,15 +402,19 @@ a {
     display: inline-block;
     position: relative;
     font-weight: 700; }
-    a.text-link:after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      height: 2px;
-      left: 0;
-      background: #5B19FF;
-      border-radius: 2px; }
+    a.text-link--primary {
+      color: #5B19FF; }
+      a.text-link--primary:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        height: 2px;
+        left: 0;
+        background: #5B19FF;
+        border-radius: 2px; }
+    a.text-link + .text-link {
+      margin-left: 32px; }
 
 .rotate-right {
   -webkit-transform: rotate(8deg);
@@ -417,9 +433,7 @@ a {
   display: flex; }
 
 .post-content img {
-  width: 128px;
-  float: left;
-  padding: 0 32px 32px 0; }
+  width: 128px; }
 .post-content h2 {
   font-size: 24px;
   line-height: 32px;
@@ -429,8 +443,13 @@ a {
   margin-bottom: 16px; }
   .post-content h2 + p {
     margin-top: 0; }
-.post-content p img:first-child {
-  display: none; }
+.post-content .full-image {
+  width: 100%; }
+.post-content .breakout-image {
+  width: 150%;
+  -webkit-transform: translateX(-25%);
+      -ms-transform: translateX(-25%);
+          transform: translateX(-25%); }
 
 .post {
   padding: 128px 0;

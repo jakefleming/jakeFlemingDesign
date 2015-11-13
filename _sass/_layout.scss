@@ -197,6 +197,22 @@ position: relative;
       font-size: 18px;
     }
   }
+
+  .quote {
+    display: block;
+    font-size: 32px;
+    line-height: 40px;
+    font-style: italic;
+    margin-bottom: 1em;
+    padding: 40px;
+    border-left: 4px solid $text-color;
+    position: relative;
+    &-author {
+      display: block;
+      font-size: 16px;
+      font-style: normal;
+    }
+  }
 }
 
 .post-trivia {
@@ -264,7 +280,6 @@ a {
     text-decoration: none;
   }
   &.text-link {
-    color: $accent-color-3;
     font-size: 16px;
     line-height: 24px;
     text-transform: uppercase;
@@ -272,15 +287,21 @@ a {
     display: inline-block;
     position: relative;
     font-weight: 700;
-    &:after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      height: 2px;
-      left: 0;
-      background: $accent-color-3;
-      border-radius: 2px;
+    &--primary {
+      color: $accent-color-3;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        height: 2px;
+        left: 0;
+        background: $accent-color-3;
+        border-radius: 2px;
+      }
+    }
+    +.text-link {
+      margin-left: 32px;
     }
   }
 }
@@ -300,8 +321,8 @@ a {
 .post-content {
   img {
     width: 128px;
-    float: left;
-    padding: 0 32px 32px 0;
+    //float: left;
+    //padding: 0 32px 32px 0;
   }
   h2 {
     font-size: 24px;
@@ -316,8 +337,15 @@ a {
   }
   p {
     img:first-child {
-      display: none;
+      //display: none;
     }
+  }
+  .full-image {
+    width: 100%;
+  }
+  .breakout-image {
+    width: 150%;
+    transform: translateX(-25%);
   }
 }
 
