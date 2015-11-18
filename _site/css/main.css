@@ -450,6 +450,14 @@ a {
   -webkit-transform: translateX(-25%);
       -ms-transform: translateX(-25%);
           transform: translateX(-25%); }
+.post-content .left-image {
+  float: left;
+  padding: 0 32px 32px 0;
+  width: 288px; }
+.post-content .right-image {
+  float: right;
+  padding: 0 0 32px 32px;
+  width: 288px; }
 
 .post {
   padding: 128px 0;

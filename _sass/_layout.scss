@@ -347,6 +347,16 @@ a {
     width: 150%;
     transform: translateX(-25%);
   }
+  .left-image {
+    float: left;
+    padding: 0 32px 32px 0;
+    width: 96px *3;
+  }
+  .right-image {
+    float: right;
+    padding: 0 0 32px 32px;
+    width: 96px *3;
+  }
 }
 
 .post {
